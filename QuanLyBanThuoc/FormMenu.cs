@@ -16,6 +16,7 @@ namespace QuanLyBanThuoc
         public FormMenu()
         {
             InitializeComponent();
+            this.Size = new Size(750, 620);
         }
 
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)

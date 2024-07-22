@@ -42,10 +42,7 @@
             this.dt_ngsinh = new System.Windows.Forms.DateTimePicker();
             this.rb_nam = new System.Windows.Forms.RadioButton();
             this.rb_nu = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
             this.dgv_tblNV = new System.Windows.Forms.DataGridView();
-            this.sDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quanlyThuocDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_boqua = new System.Windows.Forms.Button();
@@ -55,9 +52,12 @@
             this.btn_lsdn = new System.Windows.Forms.Button();
             this.btn_lsdx = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_inDSNV = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tblNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanlyThuocDataSetBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -178,49 +178,21 @@
             this.rb_nu.Text = "Nữ";
             this.rb_nu.UseVisualStyleBackColor = true;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 291);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 16);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Danh sách nhân viên";
-            // 
             // dgv_tblNV
             // 
             this.dgv_tblNV.AllowUserToAddRows = false;
             this.dgv_tblNV.AllowUserToDeleteRows = false;
             this.dgv_tblNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_tblNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tblNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sDiaChi,
-            this.sDienThoai});
-            this.dgv_tblNV.Location = new System.Drawing.Point(15, 341);
+            this.dgv_tblNV.Location = new System.Drawing.Point(12, 21);
             this.dgv_tblNV.Name = "dgv_tblNV";
             this.dgv_tblNV.ReadOnly = true;
             this.dgv_tblNV.RowHeadersWidth = 51;
             this.dgv_tblNV.RowTemplate.Height = 24;
-            this.dgv_tblNV.Size = new System.Drawing.Size(874, 216);
+            this.dgv_tblNV.Size = new System.Drawing.Size(867, 230);
             this.dgv_tblNV.TabIndex = 8;
             this.dgv_tblNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tblNV_CellContentClick);
             this.dgv_tblNV.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tblNV_CellContentDoubleClick);
-            // 
-            // sDiaChi
-            // 
-            this.sDiaChi.DataPropertyName = "sDiaChi";
-            this.sDiaChi.HeaderText = "sDiaChi";
-            this.sDiaChi.MinimumWidth = 6;
-            this.sDiaChi.Name = "sDiaChi";
-            this.sDiaChi.ReadOnly = true;
-            // 
-            // sDienThoai
-            // 
-            this.sDienThoai.DataPropertyName = "sDienThoai";
-            this.sDienThoai.HeaderText = "sDienThoai";
-            this.sDienThoai.MinimumWidth = 6;
-            this.sDienThoai.Name = "sDienThoai";
-            this.sDienThoai.ReadOnly = true;
             // 
             // btn_them
             // 
@@ -302,12 +274,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_inDSNV);
             this.groupBox1.Controls.Add(this.btn_tim);
             this.groupBox1.Controls.Add(this.btn_xoa);
             this.groupBox1.Controls.Add(this.btn_sua);
             this.groupBox1.Controls.Add(this.btn_boqua);
             this.groupBox1.Controls.Add(this.btn_them);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.rb_nu);
             this.groupBox1.Controls.Add(this.rb_nam);
             this.groupBox1.Controls.Add(this.dt_ngsinh);
@@ -328,15 +300,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
             // 
+            // btn_inDSNV
+            // 
+            this.btn_inDSNV.Location = new System.Drawing.Point(767, 33);
+            this.btn_inDSNV.Name = "btn_inDSNV";
+            this.btn_inDSNV.Size = new System.Drawing.Size(90, 50);
+            this.btn_inDSNV.TabIndex = 10;
+            this.btn_inDSNV.Text = "In DSNV";
+            this.btn_inDSNV.UseVisualStyleBackColor = true;
+            this.btn_inDSNV.Click += new System.EventHandler(this.btn_inDSNV_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgv_tblNV);
+            this.groupBox2.Location = new System.Drawing.Point(9, 341);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(879, 266);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sach nhan vien";
+            // 
             // QuanLyNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 604);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_lsdx);
             this.Controls.Add(this.btn_lsdn);
-            this.Controls.Add(this.dgv_tblNV);
             this.Name = "QuanLyNV";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -344,6 +336,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.quanlyThuocDataSetBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -361,7 +354,6 @@
         private System.Windows.Forms.TextBox tb_diachi;
         private System.Windows.Forms.RadioButton rb_nam;
         private System.Windows.Forms.RadioButton rb_nu;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgv_tblNV;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_boqua;
@@ -374,12 +366,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sTenNVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dNgaySinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn bGioiTinhDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sDiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sDienThoai;
         private System.Windows.Forms.DateTimePicker dt_ngsinh;
         private System.Windows.Forms.Button btn_lsdn;
         private System.Windows.Forms.Button btn_lsdx;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btn_inDSNV;
     }
 }
 
